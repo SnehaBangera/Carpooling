@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiftShare - Find a Carpool</title>
+   
+    <link rel="stylesheet" href="style5.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="#" class="logo">LiftShare</a>
+            <div class="nav-buttons">
+                <button class="nav-button active">Find a Carpool</button>
+                <button class="nav-button"> <a href="offer.html" class="nav-link">Offer a Ride</a></button>
+                
+            </div>
+            <button class="profile-button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+            </button>
+        </header>
+
+        <div class="search-container">
+            <form class="search-form">
+                <div class="input-group">
+                    <span class="icon location-icon">📍</span>
+                    <input type="text" placeholder="Pickup location" class="input-field">
+                </div>
+                <div class="input-group">
+                    <span class="icon destination-icon">🎯</span>
+                    <input type="text" placeholder="Destination" class="input-field">
+                </div>
+                <div class="date-time-container">
+                    <div class="input-group half">
+                        <span class="icon calendar-icon">📅</span>
+                        <input type="date" class="input-field">
+                    </div>
+                    <div class="input-group half">
+                        <span class="icon time-icon">⏰</span>
+                        <input type="time" class="input-field">
+                    </div>
+                </div>
+                <button type="submit" class="search-button">Search Rides</button>
+            </form>
+        </div>
+
+        <div class="rides-section">
+            <div class="rides-header">
+                <h2>Available Rides</h2>
+                <button class="filter-button">
+                    Filter
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="rides-list">
+                <div class="ride-card">
+                    <div class="ride-main">
+                        <div class="ride-route">Downtown → Airport</div>
+                        <div class="ride-price">$15</div>
+                    </div>
+                    <div class="ride-info">Tomorrow, 9:00 AM</div>
+                    <div class="ride-footer">
+                        <div class="ride-details">
+                            <span class="seats">3 seats left</span>
+                            <span class="driver">Sarah M.</span>
+                        </div>
+                        <button class="details-button">Details</button>
+                    </div>
+                </div>
+
+                <div class="ride-card">
+                    <div class="ride-main">
+                        <div class="ride-route">University → Shopping Mall</div>
+                        <div class="ride-price">$8</div>
+                    </div>
+                    <div class="ride-info">Today, 4:30 PM</div>
+                    <div class="ride-footer">
+                        <div class="ride-details">
+                            <span class="seats">2 seats left</span>
+                            <span class="driver">Mike R.</span>
+                        </div>
+                        <button class="details-button">Details</button>
+                    </div>
+                </div>
+
+                <div class="ride-card">
+                    <div class="ride-main">
+                        <div class="ride-route">Tech Park → City Center</div>
+                        <div class="ride-price">$12</div>
+                    </div>
+                    <div class="ride-info">Tomorrow, 8:30 AM</div>
+                    <div class="ride-footer">
+                        <div class="ride-details">
+                            <span class="seats">4 seats left</span>
+                            <span class="driver">John D.</span>
+                        </div>
+                        <button class="details-button">Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
