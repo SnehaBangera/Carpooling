@@ -57,3 +57,28 @@ body {
 .signup:hover {
     background-color: rgb(232, 232, 239);
 }
+.back h1{
+    text-align: center;
+    color:black;
+}
+.back p{
+    text-align: center;
+    padding-top: 5px;
+}
+.back {
+    background-image: url("./car.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: calc(100vh - 80px); /* Adjust '80px' to your header's height */
+    position: relative;
+    text-align:center;
+    color:black;
+    font-size: 1.0em;
+    
+
+
+    
+    
+}

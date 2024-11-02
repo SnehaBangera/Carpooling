@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Options</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Payment Options</h1>
+
+        <div class="payment-options">
+            <form action="confirm.html" method="POST">
+                <div class="payment-method">
+                    <input type="radio" id="upi" name="payment_method" value="upi" required>
+                    <label for="upi">UPI</label>
+                    <input type="text" placeholder="Enter UPI ID" class="payment-input">
+                </div>
+
+                <div class="payment-method">
+                    <input type="radio" id="credit-card" name="payment_method" value="credit_card">
+                    <label for="credit-card">Credit/Debit Card</label>
+                    <input type="text" placeholder="Card Number" class="payment-input">
+                    <input type="text" placeholder="MM/YY" class="payment-input">
+                    <input type="text" placeholder="CVV" class="payment-input">
+                </div>
+
+                <div class="payment-method">
+                    <input type="radio" id="net-banking" name="payment_method" value="net_banking">
+                    <label for="net-banking">Net Banking</label>
+                    <select class="payment-input">
+                        <option value="select">Select Bank</option>
+                        <option value="bank1">Bank 1</option>
+                        <option value="bank2">Bank 2</option>
+                        <option value="bank3">Bank 3</option>
+                    </select>
+                    <input type="radio" name="payment_method" value="cash">
+                    <label for="cash">Cash</label>
+                </div>
+                 <a href="confirm.html">
+                    <button  class="pay-button">Proceed to Pay</button>
+                 </a>
+                
+            </form>
+        </div>
+    </div>
+</body>
+</html>
