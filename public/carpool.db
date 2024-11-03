@@ -1,0 +1,101 @@
+CREATE TABLE User (
+    user_id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    phone_number VARCHAR(15) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    address TEXT
+);
+
+CREATE TABLE Vehicle (
+    vehicle_id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    license_plate VARCHAR(20) UNIQUE NOT NULL,
+    vehicle_type VARCHAR(50) NOT NULL,
+    seating_capacity INT NOT NULL,
+    model VARCHAR(100) NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES User(user_id)
+);
+
+CREATE TABLE Ride (
+    ride_id INT PRIMARY KEY AUTO_INCREMENT,
+    driver_id INT,
+    vehicle_id INT,
+    source_location VARCHAR(255) NOT NULL,
+    destination_location VARCHAR(255) NOT NULL,
+    ride_date DATE NOT NULL,
+    start_time TIME NOT NULL,
+    end_time TIME NOT NULL,
+    total_seats INT NOT NULL,
+    available_seats INT NOT NULL,
+    fare DECIMAL(10, 2) NOT NULL,
+    FOREIGN KEY (driver_id) REFERENCES User(user_id),
+    FOREIGN KEY (vehicle_id) REFERENCES Vehicle(vehicle_id)
+);
+
+CREATE TABLE Booking (
+    booking_id INT PRIMARY KEY AUTO_INCREMENT,
+    ride_id INT,
+    user_id INT,
+    booking_date DATE NOT NULL,
+    status VARCHAR(20) NOT NULL,
+    FOREIGN KEY (ride_id) REFERENCES Ride(ride_id),
+    FOREIGN KEY (user_id) REFERENCES User(user_id)
+);
+
+CREATE TABLE Payment (
+    payment_id INT PRIMARY KEY AUTO_INCREMENT,
+    booking_id INT,
+    user_id INT,
+    amount DECIMAL(10, 2) NOT NULL,
+    payment_method VARCHAR(50) NOT NULL,
+    payment_status VARCHAR(20) NOT NULL,
+    payment_date DATE NOT NULL,
+    FOREIGN KEY (booking_id) REFERENCES Booking(booking_id),
+    FOREIGN KEY (user_id) REFERENCES User(user_id)
+);
+
+
+CREATE TABLE RideRequest (
+    request_id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    source_location VARCHAR(255) NOT NULL,
+    destination_location VARCHAR(255) NOT NULL,
+    request_date DATE NOT NULL,
+    status VARCHAR(20) NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES User(user_id)
+);
+
+CREATE TABLE Notification (
+    notification_id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    message TEXT NOT NULL,
+    notification_date DATE NOT NULL,
+    status VARCHAR(20) NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES User(user_id)
+);
+
+CREATE TABLE RideHistory (
+    history_id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    ride_id INT,
+    role VARCHAR(20) NOT NULL,
+    start_time TIME NOT NULL,
+    end_time TIME NOT NULL,
+    total_fare DECIMAL(10, 2) NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES User(user_id),
+    FOREIGN KEY (ride_id) REFERENCES Ride(ride_id)
+);
+
+
+CREATE TABLE Address (
+    address_id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    address_line1 VARCHAR(255) NOT NULL,
+    address_line2 VARCHAR(255),
+    city VARCHAR(100) NOT NULL,
+    state VARCHAR(100) NOT NULL,
+    postal_code VARCHAR(20) NOT NULL,
+    country VARCHAR(100) NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES User(user_id)
+);
