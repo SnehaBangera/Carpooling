@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Form</title>
+    <link rel="stylesheet" href="/styles/vehicle.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Vehicle Form</h1>
+        </header>
+        <main>
+            <form action="/submit_vehicle" method="POST">
+                <div class="input-field">
+                    <label for="user_id">User ID:</label>
+                    <input type="number" name="user_id" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="license_plate">License Plate:</label>
+                    <input type="text" name="license_plate" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="vehicle_type">Vehicle Type:</label>
+                    <input type="text" name="vehicle_type" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="seating_capacity">Seating Capacity:</label>
+                    <input type="number" name="seating_capacity" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="model">Model:</label>
+                    <input type="text" name="model" required>
+                </div>
+
+                <div class="input-field button">
+                    <button type="submit">Submit Vehicle</button>
+                </div>
+            </form>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ride Form</title>
+    <link rel="stylesheet" href="/styles/ride_form.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ride Form</h1>
+        </header>
+        <main>
+            <form action="/submit_ride" method="POST">
+                <div class="input-field">
+                    <label for="driver_id">Driver ID:</label>
+                    <input type="number" name="driver_id" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="vehicle_id">Vehicle ID:</label>
+                    <input type="number" name="vehicle_id" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="source_location">Source Location:</label>
+                    <input type="text" name="source_location" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="destination_location">Destination Location:</label>
+                    <input type="text" name="destination_location" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="ride_date">Ride Date:</label>
+                    <input type="date" name="ride_date" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="start_time">Start Time:</label>
+                    <input type="time" name="start_time" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="end_time">End Time:</label>
+                    <input type="time" name="end_time" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="total_seats">Total Seats:</label>
+                    <input type="number" name="total_seats" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="available_seats">Available Seats:</label>
+                    <input type="number" name="available_seats" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="fare">Fare:</label>
+                    <input type="number" step="0.01" name="fare" required>
+                </div>
+
+                <div class="input-field button">
+                    <button type="submit">Submit Ride</button>
+                </div>
+            </form>
+        </main>
+    </div>
+</body>
+</html>

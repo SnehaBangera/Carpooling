@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: #007bff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav {
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    font-size: 2.5em;
+    margin: 10px 0;
+}
+
+.intro {
+    font-size: 1.2em;
+    margin: 5px 0 20px;
+}
+
+#services, #how-it-works, #testimonials {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #007bff;
+    font-size: 2em;
+}
+
+.service-card {
+    background: #f9f9f9;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.service-card:hover {
+    transform: scale(1.02);
+    border-color: #007bff;
+}
+
+.service-card h3 {
+    color: #007bff;
+}
+
+ol {
+    padding-left: 20px;
+}
+
+.testimonial {
+    margin: 10px 0;
+    padding: 10px;
+    border-left: 4px solid #007bff;
+    background: #f9f9f9;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #007bff;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .service-card {
+        margin: 10px 0;
+    }
+}

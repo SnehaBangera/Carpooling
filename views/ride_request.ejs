@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ride Request Form</title>
+    <link rel="stylesheet" href="/styles/ride_request.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ride Request Form</h1>
+        </header>
+        <main>
+            <form action="/submit_ride_request" method="POST">
+                <div class="input-field">
+                    <label for="user_id">User ID:</label>
+                    <input type="number" name="user_id" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="source_location">Source Location:</label>
+                    <input type="text" name="source_location" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="destination_location">Destination Location:</label>
+                    <input type="text" name="destination_location" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="request_date">Request Date:</label>
+                    <input type="date" name="request_date" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="status">Status:</label>
+                    <input type="text" name="status" required>
+                </div>
+
+                <div class="input-field button">
+                    <button type="submit">Submit Ride Request</button>
+                </div>
+            </form>
+        </main>
+    </div>
+</body>
+</html>

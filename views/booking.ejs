@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Form</title>
+    <link rel="stylesheet" href="/styles/booking.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Booking Form</h1>
+        </header>
+        <main>
+            <form action="/submit_booking" method="POST">
+                <div class="input-field">
+                    <label for="ride_id">Ride ID:</label>
+                    <input type="number" name="ride_id" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="user_id">User ID:</label>
+                    <input type="number" name="user_id" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="booking_date">Booking Date:</label>
+                    <input type="date" name="booking_date" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="status">Status:</label>
+                    <input type="text" name="status" required>
+                </div>
+
+                <div class="input-field button">
+                    <button type="submit">Submit Booking</button>
+                </div>
+            </form>
+        </main>
+    </div>
+</body>
+</html>

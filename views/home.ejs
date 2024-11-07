@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utility Management System</title>
+    <link rel="stylesheet" href="/styles/home.css"> <!-- Adjusted path for CSS -->
+    <script>
+        function checkLogin() {
+            const userLoggedIn = <%= user ? 'true' : 'false' %>; // Server-side variable check
+            if (!userLoggedIn) {
+                alert("You need to log in to access certain features.");
+            }
+        }
+    </script>
+</head>
+<body onload="checkLogin()">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="/booking">Booking</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/signup">Signup</a></li>
+                <li><a href="/notification">Notifications</a></li>
+                <li><a href="/payment">Payment</a></li>
+                <li><a href="/ride_history">Ride History</a></li>
+                <li><a href="/ride_request">Ride Requests</a></li>
+                <li><a href="/ride">Ride</a></li>
+                <li><a href="/vehicle">Vehicles</a></li>
+                <% if (user) { %>
+                    <li><a href="/logout">Logout</a></li>
+                <% } %>
+            </ul>
+        </nav>
+        <h1 class="logo">Utility Management System</h1>
+        <p class="intro">Your reliable partner for managing home utilities efficiently.</p>
+    </header>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-card">
+            <a href="/booking"><h3>Book a Service</h3></a>
+            <p>Quickly book a service from our wide range of options.</p>
+        </div>
+        <div class="service-card">
+            <a href="/notification"><h3>Notifications</h3></a>
+            <p>Stay updated with the latest notifications regarding your bookings.</p>
+        </div>
+        <div class="service-card">
+            <a href="/payment"><h3>Payment</h3></a>
+            <p>Secure payment options for all your services.</p>
+        </div>
+        <div class="service-card">
+            <a href="/ride_history"><h3>Ride History</h3></a>
+            <p>View your past rides and services.</p>
+        </div>
+        <div class="service-card">
+            <a href="/ride_request"><h3>Ride Requests</h3></a>
+            <p>Manage your ride requests effectively.</p>
+        </div>
+        <div class="service-card">
+            <a href="/vehicle"><h3>Vehicle Management</h3></a>
+            <p>Manage your vehicles with ease.</p>
+        </div>
+    </section>
+
+    <section id="how-it-works">
+        <h2>How It Works</h2>
+        <ol>
+            <li><strong>Sign Up:</strong> Create an account to get started.</li>
+            <li><strong>Book a Service:</strong> Select the service you need and submit a request.</li>
+            <li><strong>Make a Payment:</strong> Securely pay for your bookings online.</li>
+            <li><strong>Stay Notified:</strong> Get notifications for your bookings and rides.</li>
+        </ol>
+    </section>
+
+    <section id="testimonials">
+        <h2>What Our Users Say</h2>
+        <div class="testimonial">
+            <p>"Booking services has never been easier! The app is user-friendly." - Emma R.</p>
+        </div>
+        <div class="testimonial">
+            <p>"I love the ride history feature; it helps me track my expenses." - David S.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Utility Management System. All rights reserved.</p>
+    </footer>
+
+    <script src="/scripts/script.js"></script> <!-- Adjusted path for JS -->
+</body>
+</html>
